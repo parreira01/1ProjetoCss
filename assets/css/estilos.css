@@ -1,0 +1,173 @@
+
+@import url('./reset.css');/*nesse caso importa a fonte armazenada dentro do arquivo reset.css*/
+
+body {
+    background-color: black; /*coloca a cor de fundo de todo o corpo da página*/
+}
+
+h2 {
+    font-size: 2rem;/*tamanho da fonte em 'rem' que está ligada proporcionalmente ao tamanho da fonte raiz do html*/
+    color: #33A8DB; /*cor da fonte*/
+    font-weight: bold;/*peso (intensidade) da fonte, nesse caso negrito (bold)*/
+    letter-spacing: 4px; /*espaçamento entre letras*/
+    text-transform: uppercase;/*transforma e alterna as caixas do texto, nesse caso maiúscula (uppercase)*/
+    margin-bottom: 24px;/*margem externa do elemento, nesse caso embaixo do h2 (botton)*/
+}
+
+p{
+    color: white;
+}
+
+section {
+    margin:100px auto; /*margem de espaçamento em volta da 'tag section' sendo 100px emcima e embaixo e auto para direita e esquerda.*/
+}
+
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(49, 168, 221, .2), rgba(0, 0, 0, .6)), url('/assets/images/banner.png');/*essa propriedade adiciona a imagem de fundo, o valor específico 'linear-gradient' coloca cores de forma linear de cima para baixo e o valor 'url' mostra o caminho interno ou externo do arquivo de imagem a seer usado. */
+    background-size:cover; /*faz com que a imagem ocupe todo o fundo do elemento criado, com isso pode ser que haja perda do conteúdo e da resolução*/
+    background-repeat: no-repeat;/*essa propriedade permite a repetição da imagem e o valor específico 'no-repeat' fa com que a imagem seja única e sem repetiçoes*/
+    height: 600px;/*determina a altura da div banner*/
+    padding-top: 60px; /*espaçamento interno do elemento, nesse caso entre a parte superior da imagem com o início da borda*/
+    border-bottom:1px solid #33A8DB80 ;/*borda inferior com espessura de 1px 'solid'(linha continua) e com designação de uma valor cor para a borda */
+}
+
+.banner .banner-content {
+    color: white;
+    width: 600px; /*largura do banner e do banner-content*/
+    margin: auto;/*essa propriedade aplica o espaçamento externo ao elemento .banner e o valor automático segue a unidade padrão do navegador*/
+  }
+
+.banner h1 {
+    font-size: 2.5rem; /*tamanho da fonte, o valor segue o tamanho padrão da raiz html*/
+    font-weight: 900;/*define a espessura da fonte*/
+    text-transform: uppercase;
+    text-align: center;
+    color: transparent;
+    background: -webkit-linear-gradient(#33A8D8, #1472B7); /*propriedade de fundo, com valor que define cores de forma gradiente e linear de cima para baixo, o -webkit renderiza a propriedade para o navegador google crome, assim como o -ms para o IE*/
+    background-clip: text;/*preenche o fundo do texto com uma imagem. Essa propriedade precisa de outra propriedade que é a –webkit-background-clip: text*/
+    -webkit-background-clip: text;/*faz o navegador (crome) entender que é necessário reiniciar o texto e a propriedade 'color' com o valor 'transparent' para que o texto receba a imagem de fundo*/
+}
+
+.banner p {
+    font-size: 1.25rem;
+    margin: 16px 0 24px;
+    text-align: center;
+}
+
+.banner .logo {
+        background-color: rgba(0, 0, 0, .2);
+        height: 260px;/*define a altura do elemento*/
+        width: 260px;/*define a largura do elemento*/
+        margin: auto;
+        border-radius: 50%;/*define o arredondamento das bordas do elemento e o valor 50% define o elemento como sendo um círculo*/
+        padding: 16px;
+        margin-bottom: 16px;
+      } /*essas formatações são referentes ao elemento logo em relação ao elemento banner*/
+
+.banner .logo img {
+        margin: auto;
+        width: 100%;/*utilizando a largura e a altura em 100%, a imagem ficou centralizada dentro do elemento (div logo)*/
+        height: 100%;
+        object-fit: contain;/* essa propriedade determina como uma imagem ou vídeo vai se ajustar para caber dentro de um elemento e o valor 'contain' adéqua a imagem dentro da 'div' sem perder a proporção original.*/
+      }
+
+
+.banner .banner-content button {
+        color: #31A8DD; /*cor da fonte*/
+        font-size: 1.5rem;/*tamanho da fonte*/
+        font-weight: bold; /* espessura da fonte (negrito)*/
+        padding: 16px 32px;/*espaçamento interno 16 para cima e embaixo e 32 nas laterais*/
+         
+        text-transform: uppercase; /*fonte em caixa alta*/
+        letter-spacing: 4px;/*espaçamento entre letras*/
+        background-color: transparent; /*cor do fundo do 'button'transparente*/
+        border-image: linear-gradient(#3BA1CD, #1572B7);/*essa propriedade é resumida permitindo a incorporação de outras imagens, como a citada a seguir*/
+        border-image-slice: 10;/*coloca a imagem nas bordas ocupando a posição de canto superior esquerdo, canto superior direito, canto inferior direito e canto inferior esquerdo, seguido pelo topo, direita, base e esquerda da borda, assim o valor 10 dado adequa a imagem à borda. A imagem só aparecerá no centro do elemento quando for utilizado o valor 'fill'.*/
+        border-radius: 30px; /*arredonda canto das bordas do 'button' mas não da imagem*/
+        margin-left: 6.5rem;
+      }
+      
+      #course-content {
+        width: 800px;
+        text-align: center;
+      }
+      
+      #course-content .modules-list {
+        margin: 24px 0;
+      }
+      
+      #course-content .modules-list .module {
+        color: white;
+        width: 530px;
+        margin: 0 auto 24px;
+        border: 1px solid #33A8DB;
+        background-color: #252525;
+        padding: 16px;
+        border-radius: 100px;
+        box-shadow: inset -5px 6px 8px rgba(0, 0, 0, .7);
+      }
+      
+      #course-content .modules-list .module span {
+        color: #33A8DB;
+      }
+      
+      #transform-world {
+        height: 560px;
+        background-size: cover;
+        background-image: url("/assets/images/woman-code.png");
+        background-attachment: fixed;/*essa propriedade define como o fundo ficará fixado no corpo da paágina, o valor atribuido nesse caso é o 'fixed' (fixo), assim a imagem fica estática enquanto o resto da página passa por ela*/
+        border-top: 1px solid #33A8DB80;
+        border-bottom: 1px solid #33A8DB80;
+        padding: 200px;
+      }
+      
+      #transform-world p {
+        font-weight: 900;
+        font-size: 2.5rem;
+        text-transform: lowercase;
+        max-width: 250px;
+        text-shadow: 3px 2px #33A8DB;
+      }
+      
+      #professional-challenges {
+        text-align: center;
+        width: 800px;
+      }
+      
+      #professional-challenges img {
+        margin: 32px 0;
+      }
+
+      .coment {
+        border-top: 1px solid #33A8DB80;
+      }
+
+      #coment {
+        color: white;
+      }
+
+      #id {
+        color:white;
+        font-style: italic;
+        text-align: right;
+        margin-right: 30px;
+      }
+      
+      footer {
+        padding: 60px 0;
+        text-align: center;
+        background-image: linear-gradient(rgba(50, 168, 219, .0), rgba(50, 168, 219, .2));
+        border-top: 1px solid #33A8DB80;
+      }
+      
+      footer .dio-logo {
+        width: 300px;
+      }
+      
+      footer a {
+        color: #33A8DB;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      
